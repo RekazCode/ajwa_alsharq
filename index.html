@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أجواء الشرق | لاستيراد مواد البناء</title>
+    <!-- استخدام Tailwind CSS للتصميم الحديث والسريع -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- خطوط جوجل (Tajawal) لتصميم عربي راقي -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A', // أزرق داكن
+                        secondary: '#D97706', // ذهبي/برتقالي
+                        dark: '#111827',
+                        light: '#F3F4F6'
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.7), rgba(30, 58, 138, 0.8)), url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- شريط الملاحة (Navbar) -->
+    <header class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- الشعار -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="logo.png" alt="شعار الشركة" class="w-12 h-12 object-contain hidden md:block">
+                    <!-- إذا كان الشعار يحتوي على النص الخاص بالشركة يمكن إخفاء النص التالي، وإلا نتركه مع عرض الصورة -->
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary tracking-tight">أجواء الشرق</h1>
+                        <p class="text-xs text-gray-500 font-medium">لاستيراد مواد البناء</p>
+                    </div>
+                </div>
+                <!-- الروابط -->
+                <nav class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="text-gray-700 hover:text-secondary font-semibold transition">الرئيسية</a>
+                    <a href="#about" class="text-gray-700 hover:text-secondary font-semibold transition">من نحن</a>
+                    <a href="#vision" class="text-gray-700 hover:text-secondary font-semibold transition">الرؤية والأهداف</a>
+                    <a href="#products" class="text-gray-700 hover:text-secondary font-semibold transition">منتجاتنا</a>
+                    <a href="#contact" class="text-gray-700 hover:text-secondary font-semibold transition">تواصل معنا</a>
+                </nav>
+                <!-- زر التواصل -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-secondary hover:bg-yellow-600 text-white px-6 py-2 rounded-full font-bold shadow-lg transition duration-300">
+                        اتصل الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي (Hero Section) -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center pt-20">
+        <div class="text-center px-4 max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                نبني المستقبل بـ <span class="text-secondary">جودة وثقة</span>
+            </h2>
+            <p class="text-lg md:text-2xl text-gray-200 mb-10 font-light">
+                شركة أجواء الشرق، خيارك الأمثل لاستيراد وتوريد أفضل مواد البناء في ليبيا، بأسس متينة ومعايير عالمية.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#about" class="bg-primary hover:bg-blue-800 text-white px-8 py-3 rounded-full font-bold text-lg shadow-lg transition duration-300">
+                    اكتشف المزيد
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 rounded-full font-bold text-lg transition duration-300">
+                    تواصل معنا
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- نبذة عن الشركة -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356f58?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="موقع بناء" class="rounded-2xl shadow-2xl">
+                        <div class="absolute -bottom-16 -right-16 bg-white p-6 rounded-2xl shadow-2xl hidden md:block w-96 h-96 flex items-center justify-center">
+                            <img src="logo.png" alt="شعار الشركة" class="w-full h-full object-contain">
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-secondary font-bold text-lg mb-2">نبذة عنا</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">من هي شركة أجواء الشرق؟</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        شركة <strong>أجواء الشرق</strong> هي شركة ليبية رائدة مقرها العاصمة طرابلس، متخصصة في استيراد وتوريد أجود أنواع مواد البناء لتلبية احتياجات السوق المحلي، مشاريع البنية التحتية، والتطوير العقاري.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        نسعى دائماً لتوفير منتجات مطابقة لأعلى المواصفات العالمية بأسعار تنافسية، لضمان استدامة المشاريع وقوة البنيان. التزامنا بالمواعيد وجودة المواد جعلنا شريكاً موثوقاً لعملائنا في كافة أنحاء البلاد.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-700 font-semibold">جودة لا مساومة عليها</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-700 font-semibold">أسعار تنافسية وتوريد مستمر</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-700 font-semibold">فريق عمل متخصص وذو خبرة</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الرؤية والأهداف -->
+    <section id="vision" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-secondary font-bold text-lg mb-2">تطلعاتنا</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary">الرؤية والأهداف والقيم</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- الرؤية -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-primary card-hover transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 text-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-center text-gray-800 mb-4">رؤيتنا</h4>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        أن نكون الخيار الأول والشركة الرائدة في مجال استيراد وتوريد مواد البناء في ليبيا، والمساهم الرئيسي في النهضة العمرانية للبلاد من خلال تقديم جودة لا تضاهى.
+                    </p>
+                </div>
+
+                <!-- الأهداف -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-secondary card-hover transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 text-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-center text-gray-800 mb-4">أهدافنا</h4>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        توفير مواد بناء مطابقة للمواصفات العالمية، بناء وتطوير علاقات استراتيجية طويلة الأمد مع الموردين والعملاء، والمساهمة الفعالة في دعم عجلة التنمية والتطوير.
+                    </p>
+                </div>
+
+                <!-- القيم -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-primary card-hover transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 text-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-center text-gray-800 mb-4">قيمنا</h4>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        الشفافية في التعامل، الالتزام بالوعود والمواعيد، الأمانة، وتلبية احتياجات العملاء باحترافية عالية لضمان الرضا التام.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- المنتجات (أمثلة افتراضية لتوضيح التصميم) -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-secondary font-bold text-lg mb-2">استيراداتنا</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary">أبرز مواد البناء</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- منتج 1 -->
+                <div class="bg-primary rounded-xl shadow-lg p-6 flex flex-col justify-center items-center text-center h-48 hover:-translate-y-2 transition duration-300 border-b-4 border-secondary">
+                    <h4 class="text-xl font-bold text-white mb-2">حديد التسليح</h4>
+                    <p class="text-blue-200 text-sm">بمختلف الأقطار والمواصفات</p>
+                </div>
+                <!-- منتج 2 -->
+                <div class="bg-primary rounded-xl shadow-lg p-6 flex flex-col justify-center items-center text-center h-48 hover:-translate-y-2 transition duration-300 border-b-4 border-secondary">
+                    <h4 class="text-xl font-bold text-white mb-2">الأسمنت</h4>
+                    <p class="text-blue-200 text-sm">أسمنت بورتلاندي عالي الجودة</p>
+                </div>
+                <!-- منتج 3 -->
+                <div class="bg-primary rounded-xl shadow-lg p-6 flex flex-col justify-center items-center text-center h-48 hover:-translate-y-2 transition duration-300 border-b-4 border-secondary">
+                    <h4 class="text-xl font-bold text-white mb-2">الأخشاب</h4>
+                    <p class="text-blue-200 text-sm">أخشاب بناء وتشطيبات</p>
+                </div>
+                <!-- منتج 4 -->
+                <div class="bg-primary rounded-xl shadow-lg p-6 flex flex-col justify-center items-center text-center h-48 hover:-translate-y-2 transition duration-300 border-b-4 border-secondary">
+                    <h4 class="text-xl font-bold text-white mb-2">مواد التشطيبات</h4>
+                    <p class="text-blue-200 text-sm">عوازل، سيراميك، وإضافات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تواصل معنا والموقع -->
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 bg-white rounded-3xl overflow-hidden shadow-2xl text-gray-800">
+                
+                <!-- معلومات التواصل -->
+                <div class="lg:w-1/2 p-10 lg:p-16 flex flex-col justify-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">تواصل معنا</h2>
+                    <p class="text-gray-600 mb-10 leading-relaxed">
+                        نحن هنا للإجابة على كافة استفساراتكم وتلبية طلباتكم. لا تترددوا في الاتصال بنا أو زيارة مقرنا في طرابلس.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <!-- هاتف 1 -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-100 text-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-bold">رقم الهاتف الأول</p>
+                                <p class="text-xl font-bold text-primary" dir="ltr">0915424346</p>
+                            </div>
+                        </div>
+                        <!-- هاتف 2 -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-100 text-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-bold">رقم الهاتف الثاني</p>
+                                <p class="text-xl font-bold text-primary" dir="ltr">0942126370</p>
+                            </div>
+                        </div>
+                        <!-- الموقع -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-yellow-100 text-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-bold">العنوان الرئيسي</p>
+                                <p class="text-lg font-bold text-primary">طرابلس، ليبيا</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- صورة الخريطة -->
+                <div class="lg:w-1/2 relative min-h-[400px] bg-gray-200">
+                    <!-- خريطة حقيقية من جوجل ماب مدمجة -->
+                    <iframe 
+                        src="https://www.google.com/maps?q=32.8621389,13.3148611&hl=ar&z=14&output=embed" 
+                        class="absolute inset-0 w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر (تذييل الصفحة) -->
+    <footer class="bg-dark text-gray-400 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 border-b border-gray-700 pb-8">
+                <div>
+                    <h1 class="text-2xl font-bold text-white mb-4">أجواء الشرق</h1>
+                    <p class="text-sm leading-relaxed mb-4">
+                        شريكك الموثوق في توريد مواد البناء في ليبيا. نلتزم بالجودة العالية والخدمة الممتازة لبناء مستقبل أفضل.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">روابط سريعة</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-secondary transition">الرئيسية</a></li>
+                        <li><a href="#about" class="hover:text-secondary transition">من نحن</a></li>
+                        <li><a href="#products" class="hover:text-secondary transition">منتجاتنا</a></li>
+                        <li><a href="#contact" class="hover:text-secondary transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">معلومات الاتصال</h3>
+                    <ul class="space-y-2 text-sm" dir="ltr">
+                        <li class="text-right">طرابلس، ليبيا <span class="font-bold ml-2">📍</span></li>
+                        <li class="text-right">0915424346 <span class="font-bold ml-2">📞</span></li>
+                        <li class="text-right">0942126370 <span class="font-bold ml-2">📞</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pt-8 text-sm">
+                <p>&copy; 2024 شركة أجواء الشرق لاستيراد مواد البناء. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
